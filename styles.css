@@ -1,0 +1,183 @@
+:root {
+    --primaryOrange: hsl(25, 97%, 53%);
+
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: #959eac;
+    --darkBlueTwo: #202730;
+    --darkBlue: #2b3541;
+    --mediumGrey: #7c8798;
+    --verkDarkBlue: hsl(216, 12%, 8%);
+
+    --mainFont: 'Overpass';
+    --primarySizeFont: 10px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--primarySizeFont);
+    font-family: var(--mainFont);
+}
+body {
+    background-color: var(--verkDarkBlue);
+    color: var(--white);
+    /* padding: 20px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+    background-color: var(--darkBlueTwo);
+    width: 80vw;
+    height: 60vh;
+    border-radius: 20px;
+    padding: 20px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.star-container {
+    /* background-color: yellow; */
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+.star {
+    background-color: var(--darkBlue);
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star-img {
+    width: 15px;
+}
+.text-container {
+    /* margin-bottom: 10px; */
+}
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+p {
+    color: var(--mediumGrey);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 20px;
+    /* margin-bottom: 20px; */
+}
+.button {
+    border-radius: 100px;
+    border: none;
+    background-color: var(--darkBlue);
+    height: 40px;
+    width: 40px;
+    color: var(--mediumGrey);
+    font-size: 1.4rem;
+    margin: 0px 6px;
+    transition: all 0.3s;
+}
+.button:hover {
+    background-color: var(--mediumGrey);
+    color: var(--darkBlue);
+}
+.button:focus {
+    background-color: var(--primaryOrange);
+    color: var(--white);
+}
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px;
+    /* margin-bottom: 30px; */
+}
+.submit {
+    color: var(--white);
+    background-color: var(--primaryOrange);
+    border-radius: 50px;
+    border: none;
+    height: 40px;
+    width: 95%;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.submit:hover {
+    color: var(--primaryOrange);
+    background-color: var(--white);
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 30px; */
+}
+
+/* Success Container Styles */
+.success-container {
+    background-color: var(--darkBlueTwo);
+    width: 80vw;
+    height: 60vh;
+    border-radius: 10px;
+    padding: 20px;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.success-image {
+    margin: 25px 0px;
+}
+.image {
+    width: 150px;
+}
+.success-selected {
+    background-color: var(--darkBlue);
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 10px 0px
+}
+.success-p {
+    color: var(--primaryOrange);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.success-text {
+    text-align: center;
+    margin: 10px 0px;
+}
+.success-h1 {
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+#success-span {
+    color: var(--primaryOrange);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+/* FOR DESKTOP SIZE STUFF */
+@media only screen and (min-width: 380px) {
+    .container {
+        width: 25vw;
+        height: 50vh;
+        /* padding: 30px; */
+        border-radius: 30px;
+    }
+    .star-container { padding-bottom: 10px; }
+    .button {margin: 0px 8px;}
+    .success-container {
+        width: 25vw;
+        height: 50vh;
+        padding: 30px;
+        border-radius: 30px;
+    }
+}
